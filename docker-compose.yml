@@ -6,11 +6,11 @@ services:
       # https://github.com/wg-easy/wg-easy/blob/master/How_to_generate_an_bcrypt_hash.md
       - PASSWORD_HASH=
       - PORT=51821
-      - WG_PORT=51820
+      - WG_PORT=123
     volumes:
       - ./config/wg-easy:/etc/wireguard
     ports:
-      - 51820:51820/udp
+      - 123:123/udp
       - 51821:51821/tcp
     cap_add:
       - NET_ADMIN
