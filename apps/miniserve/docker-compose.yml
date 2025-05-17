@@ -1,0 +1,9 @@
+services:
+  miniserve:
+    container_name: miniserve
+    volumes:
+      - ./data:/data
+    ports:
+      - 8080:8080
+    image: docker.io/svenstaro/miniserve:latest
+    command: /data
