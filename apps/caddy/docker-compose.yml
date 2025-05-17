@@ -2,7 +2,7 @@ services:
   caddy:
     container_name: caddy
     restart: always
-    image: caddy:latest
+    build: .
     cap_add:
       - NET_ADMIN
     ports:
@@ -13,8 +13,6 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
-
 volumes:
   caddy_data:
-    external: true
   caddy_config:
